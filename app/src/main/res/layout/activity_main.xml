@@ -4,19 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:weightSum="2"
     tools:context=".MainActivity">
 
-    <Button
+    <androidx.cardview.widget.CardView
         android:id="@+id/btnMap"
-        android:text="MAP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_weight="1"
+        android:clickable="true"
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:elevation="8dp"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content">
 
-    <Button
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_map"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:text="Buka Peta"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/btnSensor"
-        android:text="SENSOR"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:elevation="8dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_sensor"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:text="Buka Sensor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>
